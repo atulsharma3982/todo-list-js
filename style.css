@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: bisque;
+    position: relative;
+    padding-bottom: 3em;
+}
+
+.main {
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    gap: 60px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bolder;
+    height: 100px;
+    color: rgb(249, 160, 51);
+}
+
+.button {
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    font-weight: 100;
+    color: white;
+    background-color: rgb(244, 174, 89);
+    border: none;
+    cursor: pointer;
+}
+
+.section {
+    width: 50vw;
+    min-height: 12vh;
+    max-height: 80vh;
+    padding: 30px 70px 50px 70px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.section>div:first-child {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.left {
+    background-color: rgb(247, 166, 67);
+}
+
+.right {
+    background-color: rgba(153, 153, 153, 0.511);
+}
+
+.content {
+    height: 60vh;
+    overflow-y: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(88, 61, 61, 0.204)
+        /* Scrollbar Track Color */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: rgba(82, 81, 81, 0.647);
+    /* Scrollbar Thumb Color (the moving part) */
+    border-radius: 10px;
+}
+
+.input {
+    background: transparent;
+    border: none;
+    width: 200%;
+    height: 10%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+
+.modal {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* This stays fully opaque */
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    /* bottom: 10vh;
+    right: 15vw; */
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 20vw;
+    min-width: 230px;
+    height: 20vh;
+    background-color: rgba(165, 42, 42, 0.977);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task {
+    border: none;
+    padding: 5px;
+    margin: auto;
+    width: 95%;
+    height: 45%;
+    resize: none;
+    border-radius: 5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    height: 35%;
+}
+
+.done-cancel{
+    border: none;
+    padding: 7px 16px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 22px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.done{
+    background-color: rgb(255 39 39);
+}
+
+.cancel{
+    background-color: rgba(255, 39, 39, 0);
+}
+
+ul li{
+    font-size: 16px;
+    font-weight: 200;
+    display: flex;
+}
+
+@media screen and (max-width:900px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .section {
+        margin: auto;
+    }
+}
