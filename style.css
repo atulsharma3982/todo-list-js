@@ -195,11 +195,17 @@ ul li{
     font-weight: 200;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     /* gap: 20px; */
     /* background-color: aqua; */
     /* width: 300%; */
     flex-wrap: nowrap;
 }
+
+ul li div input{
+    cursor: pointer;
+}
+
 ul li div{
     /* width: 200%; */
     display: flex;
@@ -237,5 +243,22 @@ ul li:hover img{
 @media screen and (max-width:650px) {
     ul{
         width: 100%;
+    }
+
+    .section{
+        width: 60vw;
+        padding: 30px 40px 50px 40px;
+    }
+    
+}
+
+@media screen and (max-width:426px){
+    .section>div:first-child{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:366px){
+    .section>div:first-child{
+        font-size: 25px;
     }
 }
