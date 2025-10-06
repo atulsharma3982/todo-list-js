@@ -41,6 +41,7 @@ btn.addEventListener("click", () => {
     newTaskWindow.appendChild(buttons);
     body.append(overlay);
     body.append(newTaskWindow);
+    input.focus();
     // btn.ariaHidden()
     // btn.setAttribute("hidden", "hidden");
     btn.style.display = "none";
@@ -49,18 +50,25 @@ btn.addEventListener("click", () => {
         overlay.remove();
         newTaskWindow.remove();
     })
-    done.addEventListener("click", () => {
+    done.addEventListener("click", add = () => {
         console.log("clicked");
         if (input.value && input.value.trim().length) {
             let li = document.createElement("li");
             let checkbox = document.createElement("input");
             let p = document.createElement("p");
+            let del = document.createElement("img");
+            let div = document.createElement("div");
+            del.src="assets/delete-2-svgrepo-com.svg";
+            del.alt="del";
+            del.style.width="15px";
             checkbox.type = "checkbox";
             checkbox.name = "task";
             li.id = `task${count++}`;
             p.innerHTML=input.value.trim();
-            li.append(checkbox);
-            li.append(p);
+            div.append(checkbox);
+            div.append(p);
+            li.appendChild(div);
+            li.appendChild(del);
             // li.appendChild(input.value.trim().length);
             ul.appendChild(li);
             btn.removeAttribute('style');
@@ -72,6 +80,13 @@ btn.addEventListener("click", () => {
         }
     })
 });
+
+document.body.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && document.querySelector(".modal")) {
+    document.querySelector(".done")?.click(); // triggers the Add Task button
+  }
+});
+
 
 let ul = document.querySelector("ul");
 let leftul = document.querySelector(".left-content").querySelector("ul");
@@ -86,7 +101,7 @@ if(leftul){
                 let p = task.querySelector("p");
                 p.innerHTML=`<s>${p.textContent}</s>`
                 // console.log(task.innerHTML)
-                console.log(task)
+                // console.log(task)
                 // rightul.appendChild(task);
                 rightul.appendChild(task);
             }
@@ -102,12 +117,33 @@ if(rightul){
                 let task = e.target.closest("li");
                 let p = task.querySelector("p");
                 p.innerHTML=p.textContent
-                console.log(task)
+                // console.log(task)
                 leftul.appendChild(task);
             }
         }
     })
 }
+
+leftul.addEventListener("click",(e)=>{
+    if(e.target.tagName==="IMG"){
+        console.log("working")
+        e.target.closest("li").remove();
+    }
+})
+rightul.addEventListener("click",(e)=>{
+    if(e.target.tagName==="IMG"){
+        console.log("working")
+        e.target.closest("li").remove();
+    }
+})
+
+// document.addEventListener('contextmenu', function(e) {
+//     if (e.target.closest('ul') && e.target.closest('ul').className === 'leftul') {
+//         console.log("Clicked");
+//         console.log(e.target.closest("li"));
+//         e.preventDefault(); // Prevent default menu if desired
+//     }
+// });   
 
 // let done = document.querySelector(".done");
 // let cancel = document.getElementsByClassName(".cancel");

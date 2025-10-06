@@ -69,6 +69,8 @@ body {
     background-color: rgba(153, 153, 153, 0.511);
 }
 
+
+
 .content {
     height: 60vh;
     overflow-y: auto;
@@ -94,12 +96,16 @@ body {
     border-radius: 10px;
 }
 
-.input {
+.right-content{
+    color: rgb(59, 59, 59);
+}
+
+/* .input {
     background: transparent;
     border: none;
     width: 200%;
     height: 10%;
-}
+} */
 
 .overlay {
     position: fixed;
@@ -123,7 +129,7 @@ body {
     /* This stays fully opaque */
     position: absolute;
     margin: auto;
-    top: 50%;
+    top: 50vh;
     left: 50%;
     /* bottom: 10vh;
     right: 15vw; */
@@ -176,11 +182,48 @@ body {
     background-color: rgba(255, 39, 39, 0);
 }
 
+ul{
+    width: 80%;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
 ul li{
     font-size: 16px;
     font-weight: 200;
     display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    /* background-color: aqua; */
+    /* width: 300%; */
+    flex-wrap: nowrap;
 }
+ul li div{
+    /* width: 200%; */
+    display: flex;
+    gap: 5px;
+    /* background-color: aliceblue; */
+    flex: 1;
+}
+
+ul li:hover{
+    transition: ease-in-out 50ms;
+    background-color: rgba(128, 128, 128, 0.393);
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+ul li img{
+    cursor: pointer;
+    display: none;
+    /* opacity: 0; */
+}
+
+ul li:hover img{
+    display: block;
+}
+
 
 @media screen and (max-width:900px) {
     .main {
@@ -189,5 +232,10 @@ ul li{
 
     .section {
         margin: auto;
+    }
+}
+@media screen and (max-width:650px) {
+    ul{
+        width: 100%;
     }
 }
