@@ -209,6 +209,7 @@ ul li div input{
 ul li div{
     /* width: 200%; */
     display: flex;
+    /* align-items: flex-start; */
     gap: 5px;
     /* background-color: aliceblue; */
     flex: 1;
