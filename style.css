@@ -229,6 +229,10 @@ ul li:hover img,ul li:focus-within img{
     .section {
         margin: auto;
     }
+    .content{
+        min-height: 10vh;
+        max-height: 26vh;
+    }
 }
 @media screen and (max-width:650px) {
     ul{
@@ -237,9 +241,8 @@ ul li:hover img,ul li:focus-within img{
 
     .section{
         width: 60vw;
-        padding: 30px 40px 50px 40px;
+        padding: 15px 40px 25px 40px;
     }
-    
 }
 
 @media screen and (max-width:426px){
