@@ -104,7 +104,7 @@ btn.addEventListener("click", () => {
             btn.removeAttribute('style');
             overlay.remove();
             newTaskWindow.remove();
-            cancel.removeEventListener("click" , cancelTask());
+            cancel.removeEventListener("click" , cancelTask);
         }
         else {
             alert("Empty task can't be added");
@@ -118,6 +118,9 @@ document.body.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && document.activeElement === textarea) {
         e.preventDefault(); // prevents newline in textarea
         document.querySelector(".done")?.click();
+    }
+    if (e.key === "Escape"){
+        document.querySelector(".cancel")?.click();
     }
 });
 
