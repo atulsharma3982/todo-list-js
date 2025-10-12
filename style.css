@@ -14,7 +14,6 @@ body {
     width: 90vw;
     display: flex;
     gap: 60px;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     position: relative;
 }
 
@@ -100,13 +99,6 @@ body {
     color: rgb(59, 59, 59);
 }
 
-/* .input {
-    background: transparent;
-    border: none;
-    width: 200%;
-    height: 10%;
-} */
-
 .overlay {
     position: fixed;
     top: 0;
@@ -131,8 +123,6 @@ body {
     margin: auto;
     top: 50vh;
     left: 50%;
-    /* bottom: 10vh;
-    right: 15vw; */
     transform: translate(-50%, -50%);
     z-index: 100;
     width: 20vw;
@@ -184,7 +174,6 @@ body {
 
 ul{
     width: 80%;
-    /* margin: auto; */
     display: flex;
     flex-direction: column;
     gap:5px;
@@ -196,9 +185,6 @@ ul li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 20px; */
-    /* background-color: aqua; */
-    /* width: 300%; */
     flex-wrap: nowrap;
 }
 
@@ -207,11 +193,8 @@ ul li div input{
 }
 
 ul li div{
-    /* width: 200%; */
     display: flex;
-    /* align-items: flex-start; */
     gap: 5px;
-    /* background-color: aliceblue; */
     flex: 1;
 }
 
@@ -224,7 +207,6 @@ ul li:hover{
 ul li img{
     cursor: pointer;
     display: none;
-    /* opacity: 0; */
 }
 
 ul li:hover img{
