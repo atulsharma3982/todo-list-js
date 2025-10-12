@@ -57,17 +57,21 @@ btn.addEventListener("click", () => {
         btn.removeAttribute('style');
         overlay.remove();
         newTaskWindow.remove();
+        return;
     })
     done.addEventListener("click", () => {
-        if (input.value && input.value.trim().length) {
+        if (input.value.trim().length) {
             let li = document.createElement("li");
             let checkbox = document.createElement("input");
             let p = document.createElement("p");
-            let del = document.createElement("img");
+            let del = document.createElement("button");
+            let img = document.createElement("img");
             let div = document.createElement("div");
-            del.src = "assets/delete-2-svgrepo-com.svg";
-            del.alt = "del";
-            del.style.width = "15px";
+            del.appendChild(img);
+            del.className="del";
+            img.src = "assets/delete-2-svgrepo-com.svg";
+            img.alt = "del";
+            img.style.width = "15px";
             checkbox.type = "checkbox";
             checkbox.name = "task";
             li.id = `task${count++}`;
@@ -84,6 +88,7 @@ btn.addEventListener("click", () => {
             btn.removeAttribute('style');
             overlay.remove();
             newTaskWindow.remove();
+            cancel.removeEventListener("click");
         }
         else {
             alert("Empty task can't be added");
@@ -145,7 +150,7 @@ if (rightul) {
 }
 
 leftul.addEventListener("click", (e) => {
-    if (e.target.tagName === "IMG") {
+    if (e.target.closest(".del")) {
         let task = e.target.closest("li");
         let index = tasksToDo.findIndex(t => t === task.id);
         if (index !== -1) {
@@ -157,7 +162,7 @@ leftul.addEventListener("click", (e) => {
     }
 })
 rightul.addEventListener("click", (e) => {
-    if (e.target.tagName === "IMG") {
+    if (e.target.closest(".del")) {
         let task = e.target.closest("li");
         let index = completedTasks.findIndex(t => t === task.id);
         if (index !== -1) {

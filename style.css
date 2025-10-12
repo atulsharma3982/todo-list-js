@@ -173,7 +173,7 @@ body {
 }
 
 ul{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap:5px;
@@ -198,20 +198,27 @@ ul li div{
     flex: 1;
 }
 
-ul li:hover{
+ul li:hover,ul li:focus-within{
     transition: ease-in-out 50ms;
     background-color: rgba(128, 128, 128, 0.393);
     padding: 3px 6px;
     border-radius: 5px;
 }
-ul li img{
+
+.del{
+    background: none;
+    border: none;
     cursor: pointer;
+}
+ul li img{
     display: none;
 }
 
-ul li:hover img{
+ul li:hover img,ul li:focus-within img{
     display: block;
 }
+
+
 
 
 @media screen and (max-width:900px) {
