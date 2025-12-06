@@ -1,12 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: bisque;
     position: relative;
     padding-bottom: 3em;
+}
+
+h2{
+    font-size: 2rem;
 }
 
 .main {
@@ -21,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 1.8rem;
     font-weight: bolder;
     height: 100px;
     color: rgb(249, 160, 51);
@@ -47,18 +52,14 @@ body {
 
 .section {
     width: 50vw;
+    box-sizing: border-box;
     min-height: 12vh;
     max-height: 80vh;
-    padding: 30px 70px 50px 70px;
+    padding: 30px 45px;
     margin-bottom: 25px;
     border-radius: 10px;
 }
 
-.section>div:first-child {
-    font-size: 35px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-}
 
 .left {
     background-color: rgb(247, 166, 67);
@@ -180,8 +181,6 @@ ul{
 }
 
 ul li{
-    font-size: 16px;
-    font-weight: 200;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,10 +223,12 @@ ul li:hover img,ul li:focus-within img{
 @media screen and (max-width:900px) {
     .main {
         flex-direction: column;
+        width: 100vw;
     }
 
     .section {
         margin: auto;
+        width: 70%;
     }
     .content{
         min-height: 10vh;
@@ -239,19 +240,23 @@ ul li:hover img,ul li:focus-within img{
         width: 100%;
     }
 
+    .header>h1{
+        font-size: 1.5em;
+    }
+
     .section{
-        width: 60vw;
-        padding: 15px 40px 25px 40px;
+        width: 80%;
+        padding: 15px 25px;
     }
 }
 
 @media screen and (max-width:426px){
-    .section>div:first-child{
-        font-size: 30px;
+    .section>h2{
+        font-size: 1.8rem;
     }
 }
 @media screen and (max-width:366px){
-    .section>div:first-child{
-        font-size: 25px;
+    .section>h2{
+        font-size: 1.5em;
     }
 }
