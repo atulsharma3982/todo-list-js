@@ -41,12 +41,12 @@ This project focuses on learning **DOM manipulation**, **localStorage persistenc
 
 ## 🧩 Folder Structure  
 
-📦 To-Do-List
-┣ 📂 assets/
-┃ ┗ delete-2-svgrepo-com.svg
-┣ 📜 index.html
-┣ 📜 style.css
-┗ 📜 script.js
+📦 To-Do-List  
+┣ 📂 assets/  
+┃ ┗ delete-2-svgrepo-com.svg  
+┣ 📜 index.html  
+┣ 📜 style.css  
+┗ 📜 script.js  
 
 
 ---
