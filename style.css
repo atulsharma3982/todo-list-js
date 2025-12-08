@@ -11,7 +11,11 @@ body {
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 1.3rem;
 }
 
 .main {
@@ -74,7 +78,7 @@ h2{
 .content {
     height: 60vh;
     overflow-y: auto;
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -185,6 +189,9 @@ ul li{
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+    /* transition-property: all;
+    transition-duration: 100ms; */
+    transition: ease-in-out 100ms;
 }
 
 ul li div input{
@@ -198,10 +205,10 @@ ul li div{
 }
 
 ul li:hover,ul li:focus-within{
-    transition: ease-in-out 50ms;
     background-color: rgba(128, 128, 128, 0.393);
     padding: 3px 6px;
     border-radius: 5px;
+    scale: 1.04;
 }
 
 .del{
